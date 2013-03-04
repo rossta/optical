@@ -1,7 +1,7 @@
 .block {
   font: 14px sans-serif;
   shape-rendering: crispEdges;
-  padding: 25px 0;
+  padding: 5px 0 50px;
 }
 .day {
   fill: #fff;
@@ -12,12 +12,22 @@
   stroke: #000;
   stroke-width: 2px;
 }
-.rgb .q8-11{fill:rgb(247, 252, 245)}
-.rgb .q7-11{fill:rgb(229, 245, 224)}
-.rgb .q6-11{fill:rgb(199, 233, 192)}
-.rgb .q5-11{fill:rgb(161, 217, 155)}
-.rgb .q4-11{fill:rgb(116, 196, 118)}
-.rgb .q3-11{fill:rgb(65, 171, 93)}
-.rgb .q2-11{fill:rgb(35, 139, 69)}
-.rgb .q1-11{fill:rgb(0, 109, 44)}
-.rgb .q0-11{fill:rgb(0, 68, 27)}
+.greens .q8-11{fill:rgb(247, 252, 245)}
+.greens .q7-11{fill:rgb(229, 245, 224)}
+.greens .q6-11{fill:rgb(199, 233, 192)}
+.greens .q5-11{fill:rgb(161, 217, 155)}
+.greens .q4-11{fill:rgb(116, 196, 118)}
+.greens .q3-11{fill:rgb(65, 171, 93)}
+.greens .q2-11{fill:rgb(35, 139, 69)}
+.greens .q1-11{fill:rgb(0, 109, 44)}
+.greens .q0-11{fill:rgb(0, 68, 27)}
+
+.blues .q8-11{fill:rgb(247, 251, 255)}
+.blues .q7-11{fill:rgb(222, 235, 247)}
+.blues .q6-11{fill:rgb(198, 219, 239)}
+.blues .q5-11{fill:rgb(158, 202, 225)}
+.blues .q4-11{fill:rgb(107, 174, 214)}
+.blues .q3-11{fill:rgb(66, 146, 198)}
+.blues .q2-11{fill:rgb(33, 113, 181)}
+.blues .q1-11{fill:rgb(8, 81, 156)}
+.blues .q0-11{fill:rgb(8, 48, 107)}

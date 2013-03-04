@@ -56,7 +56,7 @@ App.CalendarIndexView = Ember.View.extend({
       .enter().append("svg")
       .attr("width", width)
       .attr("height", height)
-      .attr("class", "rgb");
+      .attr("class", "blues");
 
     var g = svg.append("g")
       .attr("transform", "translate("+((width-cellSize * 53) / 2)+","+(height-cellSize * 7 - 1)+")");
