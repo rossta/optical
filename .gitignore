@@ -10,7 +10,7 @@
 /.env
 
 # Ignore the build directory
-/build
+/public
 
 # Ignore Sass' cache
 /.sass-cache
