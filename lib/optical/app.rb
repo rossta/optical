@@ -70,8 +70,8 @@ class OptiCal::App < Sinatra::Base
 
   private
 
-  MAX_NUM_TOTAL = 100
-  MAX_NUM_RESULTS = 100
+  MAX_NUM_TOTAL = 1000
+  MAX_NUM_RESULTS = 200
 
   def get_timeline_tweets(screenname)
     opts = {}
