@@ -63,16 +63,15 @@ class OptiCal::App < Sinatra::Base
     tweets = get_timeline_tweets(params[:screenname].to_s)
     data = tweets.map do |tweet|
       posted_at = tweet.send(:created_at).utc.strftime("%Y-%m-%d")
-      text = HTMLEntities.new.decode(tweet.full_text)
-      { id: tweet.id, posted_at: posted_at, text: text }
+      { id: tweet.id, posted_at: posted_at, text: tweet.full_text.gsub(/[^\w.,'"]+/, ' ').to_json }
     end
     json calendar: { id: tweets.first.from_user, screenname: tweets.first.from_user, data: data }
   end
 
   private
 
-  MAX_NUM_TOTAL = 700
-  MAX_NUM_RESULTS = 200
+  MAX_NUM_TOTAL = 100
+  MAX_NUM_RESULTS = 100
 
   def get_timeline_tweets(screenname)
     opts = {}

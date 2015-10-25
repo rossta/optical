@@ -16,7 +16,7 @@ App.CalendarIndexView = Ember.View.extend({
   },
 
   renderCalendar: function() {
-    console.log("CalendarIndexView#didInsertElement");
+    console.log("CalendarIndexView#didInsertElement", this.get('data'));
 
     if (!this.get('data')) {
       console.log("Data undefined");
@@ -42,9 +42,13 @@ App.CalendarIndexView = Ember.View.extend({
       .rollup(function(d) { return 1 / d.length; })
       .map(this.get('controller.data'));
 
+    console.log("data", data);
+
     var color = d3.scale.quantize()
       .domain([0, 1])
       .range(d3.range(8).map(function(d) { return "q"+d+"-11"; }));
+
+    console.log("color", color);
 
     var dates = d3.extent(d3.keys(data));
 
@@ -57,6 +61,8 @@ App.CalendarIndexView = Ember.View.extend({
       .attr("width", width)
       .attr("height", height)
       .attr("class", "blues");
+
+    console.log("svg", svg);
 
     var g = svg.append("g")
       .attr("transform", "translate("+((width-cellSize * 53) / 2)+","+(height-cellSize * 7 - 1)+")");
@@ -75,6 +81,8 @@ App.CalendarIndexView = Ember.View.extend({
       .attr("x", function(d) { return week(d) * cellSize; })
       .attr("y", function(d) { return day(d) * cellSize; })
       .datum(format);
+
+    console.log("rect", rect);
 
     // svg.selectAll(".month")
     //   .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })

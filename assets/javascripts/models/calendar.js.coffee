@@ -9,8 +9,10 @@ App.Calendar = Ember.Object.extend
     Ember.$.ajax "/calendars/#{@get('screenname')}",
       dataType: 'json'
       success: (response) =>
-        console.log(response, this)
+        console.log("response", response, this)
         @setProperties(response.calendar)
+      error: (e, f) ->
+        console.log("error", e, f);
 
 App.Calendar.reopenClass
   find: (screenName) ->

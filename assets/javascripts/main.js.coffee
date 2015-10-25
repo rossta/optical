@@ -19,8 +19,10 @@ App.RESTAdapter = DS.RESTAdapter.extend()
 
 App.RESTAdapter.registerTransform 'array',
   deserialize: (serialized) ->
+    console.log("deserialize", serialized);
     if Em.isNone(serialized) then [] else serialized
   serialize: (deserialized) ->
+    console.log("serialize", deserialized);
     if Em.isNone(deserialized) then [] else deserialized
 
 window.App = App
