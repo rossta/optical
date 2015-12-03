@@ -84,12 +84,6 @@ App.CalendarIndexView = Ember.View.extend({
 
     console.log("rect", rect);
 
-    // svg.selectAll(".month")
-    //   .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
-    //   .enter().append("path")
-    //   .attr("class", "month")
-    //   .attr("d", monthPath)
-
     rect.filter(function(d) { return d in data; })
       .attr("class", function(d) { return "day " + color(data[d]); })
       .append("svg:title")
